@@ -1,0 +1,108 @@
+*devnotes.txt*    Quick development notes
+
+
+CONTENTS
+===========================================================================
+
+ 1. Introduction                                   |devnotes|
+ 2. Requirements                                   |devnotes-requirements|
+ 3. Installation                                   |devnotes-installation|
+ 4. Usage                                          |devnotes-usage|
+ 5. Mappings                                       |devnotes-mappings|
+ 6. Configuration                                  |devnotes-configuration|
+ 7. Feedback                                       |devnotes-feedback|
+ 8. Credits                                        |devnotes-credits|
+ 9. Contributors                                   |devnotes-contributors|
+10. License                                        |devnotes-license|
+
+
+Introduction                                         *:DevNotes* *devnotes*
+===========================================================================
+
+DevNotes opens a buffer where to write down quick development notes.
+
+
+Requirements                                        *devnotes-requirements*
+===========================================================================
+
+This plugin requires an UNIX environment.
+
+
+Installation                                        *devnotes-installation*
+===========================================================================
+
+Copy all files to your ~/.vim directory or use one of the following Vim
+plugin managers like a decent modern Vimmist:
+
+- pathongen: https://github.com/tpope/vim-pathogen
+- Vundle: https://github.com/gmarik/vundle
+- NeoBundle: https://github.com/Shougo/neobundle.vim
+- VAM: https://github.com/MarcWeber/vim-addon-manager
+
+
+Usage                                                      *devnotes-usage*
+===========================================================================
+
+Open a split with notes for the current project:
+
+    :call DevNotes()
+
+
+In order to have a quick feedback about how many notes are still pending,
+add to your statusline:
+
+    %{devnotes#statusline()}
+
+
+Mapping                                                  *devnotes-mapping*
+===========================================================================
+
+The default mapping is:
+
+    <Leader>dn
+
+
+Configuration                                      *devnotes-configuration*
+===========================================================================
+
+Options~
+
+Set the following variable in ~/.vimrc to control the behaviour of
+DevNotes.
+
+                                                     *g:devnotes_directory*
+g:devnotes_directory        string (default current project root)
+                            Set a valid path where all the note files will
+                            be stored.
+
+                                                         *g:devnotes_file*
+g:devnotes_file             string (default '.devnotes')
+                            Set a valid file name for the notes file.
+
+
+Feedback                                                *devnotes-feedback*
+===========================================================================
+
+Feel free to create an issue at
+https://github.com/jodosha/vim-devnotes/issues
+
+
+Credits                                                  *devnotes-credits*
+===========================================================================
+
+- Rein Henrichs (@reinh) for the documentation template.
+
+
+Contributors                                        *devnotes-contributors*
+===========================================================================
+
+- Luca Guidi (@jodosha)
+
+License                                                  *devnotes-license*
+===========================================================================
+
+MIT license: http://opensource.org/licenses/MIT
+
+
+---------------------------------------------------------------------------
+vim:tw=75:sts:ts=2:ft=help:
